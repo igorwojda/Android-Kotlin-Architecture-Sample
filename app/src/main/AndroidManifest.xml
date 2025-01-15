@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -21,8 +22,8 @@
             android:usesCleartextTraffic="true">
 
         <activity
-                android:name="com.igorwojda.showcase.app.presentation.NavHostActivity"
-                android:exported="true">
+            android:name="com.igorwojda.showcase.app.presentation.NavHostActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -30,6 +31,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="com.igorwojda.showcase.app.initializer.DynamicColorInitializer"
+                android:value="androidx.startup" />
+
+            <meta-data
+                android:name="com.igorwojda.showcase.app.initializer.KoinInitializer"
+                android:value="androidx.startup" />
+
+            <meta-data
+                android:name="com.igorwojda.showcase.app.initializer.TimberInitializer"
+                android:value="androidx.startup" />
+        </provider>
 
     </application>
 

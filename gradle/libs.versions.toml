@@ -1,9 +1,9 @@
 [versions]
-kotlin = "1.9.25"
+kotlin = "2.0.21"
 
 # KSP depends on specific Kotlin version, so it must be upgraded together with Kotlin (disabled in Renovate)
 # https://repo.maven.apache.org/maven2/com/google/devtools/ksp/symbol-processing-gradle-plugin/
-kotlinSymbolProcessing = "1.9.25-1.0.20"
+kotlinSymbolProcessing = "2.0.21-1.0.25"
 
 # Compose compiler depends on specific Kotlin version, so it must be upgraded together with Kotlin (disabled in Renovate)
 # https://developer.android.com/jetpack/androidx/releases/compose-kotlin
@@ -38,6 +38,7 @@ fragmentKtx = "1.8.5"
 # Info https://google.github.io/accompanist/flowlayout/
 # Repo https://oss.sonatype.org/content/repositories/snapshots/com/google/accompanist/accompanist-flowlayout/
 accompanistFlowLayout = "0.32.0"
+androidStartUp = "1.2.0"
 
 spotless = "6.25.0"
 
@@ -91,6 +92,7 @@ roomCompiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 accompanistFlowLayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "accompanistFlowLayout" }
 detektFormatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 konsist = "com.lemonappdev:konsist:0.16.0"
+androidStartUp = { module = "androidx.startup:startup-runtime", version.ref = "androidStartUp" }
 
 # Test dependencies
 junit = { module = "junit:junit", version.ref = "junit" }
@@ -125,3 +127,4 @@ spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 safeArgs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
 junit5Android = { id = "de.mannodermaus.android-junit5", version.ref = "androidJUnit5" }
 testLogger = { id = "com.adarshr.test-logger", version.ref = "testLogger" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

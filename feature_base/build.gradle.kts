@@ -28,6 +28,7 @@ dependencies {
     api(libs.bundles.lifecycle)
     api(libs.bundles.room)
     api(libs.bundles.compose)
+    api(libs.androidStartUp)
 
     testImplementation(projects.libraryTestUtils)
     testImplementation(libs.bundles.test)
